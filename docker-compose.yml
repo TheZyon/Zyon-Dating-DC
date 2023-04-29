@@ -1,20 +1,11 @@
 version: "3.8"
 services:
 
-  fe:
-    image: zyonb/zd-fe
-    container_name: fe
-    ports:
-      - 80:80
-    networks:
-      - spring-cloud-network
-    depends_on:
-      - be
   be:
     image: zyonb/zd-be
     container_name: be
     ports:
-      - 19000:9000
+      - 80:80
     networks:
       - spring-cloud-network
     depends_on:
